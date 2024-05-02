@@ -1,6 +1,6 @@
 # 16-Bit processor with unified cache memory
 
-This is a college work developed together with *[Luigi Eliabe](https://github.com/Luigi-Eliabe)* and other classmates that aimed to develop a 16-bit data processor with a unified cache memory.
+This is a college work developed together with *[Luigi Eliabe](https://github.com/Luigi-Eliabe)*, and other classmates, that aimed to develop a 16-bit data processor with a unified cache memory.
 
 ## Cache archtecture
 
