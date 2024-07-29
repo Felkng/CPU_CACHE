@@ -3,7 +3,7 @@
 ## Overview
 This is a college work developed together with *[Luigi Eliabe](https://github.com/Luigi-Eliabe)*, and other classmates, that aimed to develop a 16-bit data processor with a unified cache memory.
 
-![motherboard](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/main_circuit.png)
+![motherboard](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/main_circuit.png)
 
 ## Cache archtecture
 
@@ -66,7 +66,7 @@ The opcode is a 3-bit field that defines the operation to be performed. The foll
 The cache associative by set uses two mapping methods: direct mapping at the set level and associative mapping at the lines within the set. Direct mapping uses the SET field of the block address, which can be decoded into 4 sets.
 
 #### LRU Algorithm Structure
-![lru](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/lru.png)
+![lru](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/lru.png)
 - **V1 and V2 Fields**: Indicate whether the lines are valid.
 - **LRU 1 and LRU 2 Fields**: Indicate which line was the last to be stored.
 - **Miss Field**: Indicates a cache failure, triggering line replacement only on failures.
@@ -75,11 +75,11 @@ The cache associative by set uses two mapping methods: direct mapping at the set
 
 #### Cache Line Structure
 
-![cache_line](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/cache_line.png)
+![cache_line](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/cache_line.png)
 
 The data entry structure in the cache line includes:
 
-![cache_line_bits](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/line_bits.png)
+![cache_line_bits](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/line_bits.png)
 
 - **Data/Instruction Storage**: Stores data or instructions.
 - **Address Offset Field**: Determines the word to be overwritten in store-word operations.
@@ -92,7 +92,7 @@ The data entry structure in the cache line includes:
 
 Input structure for selection bits:
 
-![input_bits](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/selection_bits.png)
+![input_bits](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/selection_bits.png)
 
 - **Offset**: References the word within the block.
 - **Tag**: References the entire block in memory.
@@ -105,16 +105,16 @@ Input structure for selection bits:
 - **Modified**: Enables the modification bit in store-word operations.
 
 #### Write Policy Structure
-![write_back](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/write_back.png)
+![write_back](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/write_back.png)
 The write-back policy updates the data in main memory only when a modified cache line is overwritten. It evaluates whether the line has been modified and if it is about to be replaced, enabling data output for replacement. It filters each set to find the row to be replaced and checks for cache failure, enabling the write-back method to write data to main memory before reading a new block.
 
 #### Cache Hit
-![cache_hit](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/cache_hit.png)
+![cache_hit](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/cache_hit.png)
 A cache hit occurs when the requested data from the CPU is found in the cache. The set-associative cache allows simultaneous searches in all lines of the set. A hit is confirmed if the saved tag matches the searched tag and the line is valid, selecting the data for cache output. If none of the sets meet these conditions, a cache miss occurs, requiring data retrieval from main memory.
 
 #### Cache Controller Structure
 
-![cache_controller](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/cache_controller.png)
+![cache_controller](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/cache_controller.png)
 
 The cache controller manages the cache states and actions:
 
@@ -132,7 +132,7 @@ The cache controller ensures better control and visualization of circuit operati
 
 ### Registers Bank
 
-![registers_bank](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/registers_bank.png)
+![registers_bank](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/registers_bank.png)
 
 - **Registers**: 8 registers to hold data and perform operations.
 - **RB Register**: Points to address 0 of the memory.
@@ -140,7 +140,7 @@ The cache controller ensures better control and visualization of circuit operati
 
 ### Stall Unit
 
-![stall_unity](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/stall_unity.png)
+![stall_unity](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/stall_unity.png)
 
 Handles cache failures with the following controller bits:
 
@@ -151,7 +151,7 @@ Handles cache failures with the following controller bits:
 
 ## Main Memory
 
-![main_memory](https://github.com/Felkng/CPU_CACHE/blob/Readme/images-cpu/main_memory_cell.png)
+![main_memory](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/main_memory_cell.png)
 
 The main memory has 1 K cells with two bytes each. The structure is presented as 10 bits of addressing, and 16 bits for words (2 bytes).
 
