@@ -1,7 +1,7 @@
 # Logisim 16-Bit processor with unified cache memory
 
 ## Overview
-This is a college work developed together with *[Luigi Eliabe](https://github.com/Luigi-Eliabe)*, and other classmates, that aimed to develop a 16-bit data processor with a unified cache memory.
+This is a college work developed together with *[Luigi Eliabe](https://github.com/luigieli)*, and other classmates, that aimed to develop a 16-bit data processor with a unified cache memory.
 
 ![motherboard](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/main_circuit.png)
 
