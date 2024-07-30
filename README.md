@@ -278,4 +278,4 @@ Regarding the results obtained for cache misses and hits and the total number of
 - **Hits:** 585
 - **Hypothetical total memory accesses:** 642
 
-With a total of 59 cache misses, this means there are a total of 59 hits to main memory. Based on the hypothesis that there would be 642 memory accesses if there was no cache on the processor, we can say that there was a reduction of approximately 90% in accesses to main memory.
+With a total of 59 cache misses, this means there are a total of 59 accesses to main memory. Based on the hypothesis that there would be 642 memory accesses if there was no cache on the processor, we can say that there was a reduction of approximately 90% in accesses to main memory.
