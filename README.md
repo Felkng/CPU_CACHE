@@ -106,10 +106,12 @@ Input structure for selection bits:
 
 #### Write Policy Structure
 ![write_back](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/write_back.png)
+
 The write-back policy updates the data in main memory only when a modified cache line is overwritten. It evaluates whether the line has been modified and if it is about to be replaced, enabling data output for replacement. It filters each set to find the row to be replaced and checks for cache failure, enabling the write-back method to write data to main memory before reading a new block.
 
 #### Cache Hit
 ![cache_hit](https://github.com/Felkng/CPU_CACHE/blob/main/images-cpu/cache_hit.png)
+
 A cache hit occurs when the requested data from the CPU is found in the cache. The set-associative cache allows simultaneous searches in all lines of the set. A hit is confirmed if the saved tag matches the searched tag and the line is valid, selecting the data for cache output. If none of the sets meet these conditions, a cache miss occurs, requiring data retrieval from main memory.
 
 #### Cache Controller Structure
